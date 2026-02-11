@@ -222,18 +222,3 @@ const ListagemQuartos: React.FC = () => {
     </table>
   );
 };
-
-```
-
-## Métricas de Avaliação
-
-* **Percentual de requisitos atendidos (M1):**
-* Número total de requisitos (RFs + RNFs do domínio inicial): 17 (10 RFs + 7 RNFs).
-* Número de requisitos cobertos pelo teste (implementação): 8 (RF01, RF02, RF03, RF04, RF05, RF06 parcialmente via classes; RNF01, RNF04 via validações e UI).
-* Resultado final (%): (8 / 17) x 100 ≈ **47%**.
-
-
-* **O código atende aos critérios de aceitação definidos anteriormente?** Sim, parcialmente. Atende aos critérios de cadastro, edição e listagem de quartos (ex.: campos preenchidos, validação, listagem com colunas). Não atende totalmente a reservas ou hóspedes, mas os critérios para quartos são cumpridos (ex.: Given-When-Then para salvar e listar).
-* **Quantidade de linhas de código geradas (LOC):** 120 (contando apenas código executável, excluindo comentários e linhas em branco).
-* **Número de funções/métodos:** 12 (definições explícitas: construtores, validar, atualizarDisponibilidade, podeReservar, confirmar, fetchQuartos, salvarQuarto, editarQuarto, handleSubmit, handleEdit, e componentes funcionais como CadastroQuarto).
-* **Número de interações necessárias:** 1 (este é o prompt inicial para implementação; nenhum refinamento ou correção adicional foi necessário).
