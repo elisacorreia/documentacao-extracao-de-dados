@@ -216,18 +216,3 @@ import org.springframework.data.jpa.repository.JpaRepository;
 public interface QuartoRepository extends JpaRepository<Quarto, Integer> {}
 
 ```
-
----
-
-### Métricas de Avaliação
-
-* **Percentual de requisitos atendidos (M1):**
-* Número total de requisitos: 17 (10 RF + 7 RNF).
-* Número de requisitos cobertos pelo teste: 8 (RF01, RF02, RF03, RF04, RF05, RF06 parcialmente; RNF01, RNF04).
-* Resultado final (%): (8 / 17) x 100 ≈ **47%**.
-
-
-* **O código atende aos critérios de aceitação definidos anteriormente?** Sim, para o módulo de quartos. Atende a cadastro (campos preenchidos e salvos), edição (updates aplicados) e listagem (colunas: Número, Tipo, Preço, Disponibilidade), com suporte a múltiplas camas e validações.
-* **Quantidade de linhas de código geradas (LOC):** 95 (contando apenas código executável, excluindo comentários e linhas em branco).
-* **Número de funções/métodos:** 10 (definições explícitas: validar, atualizarDisponibilidade, podeReservar, confirmar, cadastrar, editar, listar, salvar, editar em Service, e métodos de repository herdados implicitamente).
-* **Número de interações necessárias:** 1 (este é o prompt inicial; nenhum refinamento ou correção adicional foi necessário).
