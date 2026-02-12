@@ -1,0 +1,54 @@
+// Prisma Schema - Sistema de Gestão de Hotelaria
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+// Modelo de Hóspede
+model Hospede {
+  id        String     @id @default(uuid())
+  nome      String
+  sobrenome String
+  cpf       String     @unique
+  email     String
+  criadoEm  DateTime   @default(now())
+  reservas  Reserva[]
+
+  @@map("hospedes")
+}
+
+// Modelo de Quarto
+model Quarto {
+  id            String     @id @default(uuid())
+  numero        Int        @unique
+  tipo          String
+  precoDiaria   Float
+  disponivel    Boolean    @default(true)
+  criadoEm      DateTime   @default(now())
+  reservas      Reserva[]
+
+  @@map("quartos")
+}
+
+// Modelo de Reserva
+model Reserva {
+  id           String    @id @default(uuid())
+  hospedeId    String
+  quartoId     String
+  dataCheckIn  DateTime
+  dataCheckOut DateTime
+  valorTotal   Float
+  status       String    @default("ativa")
+  criadoEm     DateTime  @default(now())
+  atualizadoEm DateTime  @updatedAt
+
+  hospede      Hospede   @relation(fields: [hospedeId], references: [id])
+  quarto       Quarto    @relation(fields: [quartoId], references: [id])
+
+  @@map("reservas")
+}

@@ -4,7 +4,6 @@
       "version": "0.1.0",
       "private": true,
       "dependencies": {
-          "@prisma/client": "*",
           "@radix-ui/react-accordion": "^1.2.3",
           "@radix-ui/react-alert-dialog": "^1.1.6",
           "@radix-ui/react-aspect-ratio": "^1.1.2",
@@ -35,9 +34,7 @@
           "class-variance-authority": "^0.7.1",
           "clsx": "*",
           "cmdk": "^1.1.1",
-          "cors": "*",
           "embla-carousel-react": "^8.6.0",
-          "express": "*",
           "input-otp": "^1.4.2",
           "lucide-react": "^0.487.0",
           "next-themes": "^0.4.6",
@@ -51,8 +48,7 @@
           "tailwind-merge": "*",
           "tailwindcss": "*",
           "uuid": "*",
-          "vaul": "^1.1.2",
-          "zod": "*"
+          "vaul": "^1.1.2"
       },
       "devDependencies": {
           "@types/node": "^20.10.0",
